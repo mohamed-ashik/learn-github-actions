@@ -1,0 +1,20 @@
+name: shell commands
+
+on: [push]
+
+jobs:
+  execute-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print working directory
+        run: pwd
+      
+      - name: print who am I
+        run: whoami
+
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          echo "github action is cool :)"
+
