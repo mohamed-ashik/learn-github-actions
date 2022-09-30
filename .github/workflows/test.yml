@@ -20,6 +20,7 @@ jobs:
 
   execute-windows-command:
     runs-on: windows-latest
+    needs: [execute-shell-command]
     steps:
       - name: print location
-        run: Get-Service
+        run: Get-Location
