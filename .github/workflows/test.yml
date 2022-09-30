@@ -18,3 +18,10 @@ jobs:
           npm -v
           echo "github action is cool :)"
 
+  execute-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: print location
+        run: |
+          Get-Location
+        shell: bash
