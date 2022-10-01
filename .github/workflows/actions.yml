@@ -23,4 +23,10 @@ jobs:
 
       - name: list files
         run: ls -a
+
+      - name: env variables
+        run: |
+          echo "COMMIT ID : ${{GITHUB_SHA}}"
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
         
