@@ -1,0 +1,17 @@
+name: "Familier with actions"
+
+on: push
+
+jobs:
+  run-a-simple-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greeting action
+        id: greet
+        uses: actions/hello-world-javascript-action:v1.1
+        with:
+          who-to-greet: 'Ashik'
+      
+      - name: output
+        run: echo "${{steps.greet.outputs.time}}"
+        

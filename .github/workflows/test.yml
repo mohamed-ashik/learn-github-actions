@@ -1,26 +1,26 @@
-name: shell commands
+# name: shell commands
 
-on: [push]
+# on: [push]
 
-jobs:
-  execute-shell-command:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print working directory
-        run: pwd
+# jobs:
+#   execute-shell-command:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: print working directory
+#         run: pwd
       
-      - name: print who am I
-        run: whoami
+#       - name: print who am I
+#         run: whoami
 
-      - name: multiline script
-        run: |
-          node -v
-          npm -v
-          echo "github action is cool :)"
+#       - name: multiline script
+#         run: |
+#           node -v
+#           npm -v
+#           echo "github action is cool :)"
 
-  execute-windows-command:
-    runs-on: windows-latest
-    needs: [execute-shell-command]
-    steps:
-      - name: print location
-        run: Get-Location
+#   execute-windows-command:
+#     runs-on: windows-latest
+#     needs: [execute-shell-command]
+#     steps:
+#       - name: print location
+#         run: Get-Location
