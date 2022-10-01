@@ -27,6 +27,6 @@ jobs:
       - name: env variables
         run: |
           echo "COMMIT ID : ${{github.sha}}"
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
+          echo Repository $GITHUB_REPOSITORY
+          echo Workspace $GITHUB_WORKSPACE
         
